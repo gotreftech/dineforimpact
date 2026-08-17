@@ -1,26 +1,50 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Colour palette ── */
+  --color-dine-black:   #090807;
+  --color-dine-dark:    #0e0c0a;
+  --color-dine-divider: #29241E;
+  --color-dine-ivory:   #F2E8D6;
+  --color-dine-gray:    #A9A096;
+  --color-dine-gold:    #C8A15A;
+  --color-dine-clay:    #A9472C;
+  --color-dine-olive:   #4A4A25;
+
+  /* ── Fonts ── */
+  --font-sans:    var(--font-montserrat);
+  --font-display: var(--font-playfair);
+  --font-script:  var(--font-script);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+* { box-sizing: border-box; }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #090807;
+  color: #F2E8D6;
+  font-family: var(--font-montserrat), "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold rule used under hero headline */
+.gold-line {
+  display: block;
+  width: 48px;
+  height: 2px;
+  background-color: #C8A15A;
+}
+
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: #090807; }
+::-webkit-scrollbar-thumb  { background: #C8A15A44; border-radius: 2px; }
+
+@keyframes pulse-zoom {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+.animate-spin-slow {
+  animation: pulse-zoom 3s ease-in-out infinite;
 }
