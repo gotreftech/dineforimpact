@@ -342,7 +342,7 @@ function Chef() {
             <p>I design and cook every menu after deep research into the community we honour for that table.</p>
             <p>My goal is simple—create unforgettable experiences that celebrate our heritage and inspire change.</p>
           </div>
-          <a href="#"
+          <a href="https://www.instagram.com/chef_muse/" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-3 border border-dine-gold text-dine-gold px-7 py-4 text-[11px] tracking-[0.22em] uppercase font-semibold hover:bg-dine-gold hover:text-dine-black transition-all duration-300 self-start">
             More About Chef Muse {ARROW}
           </a>
@@ -388,11 +388,11 @@ function Newsletter() {
 
         <div className="flex items-center gap-5 md:ml-auto flex-shrink-0">
           {[
-            { label: "Instagram", path: <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" /></> },
-            { label: "Facebook",  path: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" /> },
-            { label: "WhatsApp",  path: <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" /> },
-          ].map(({ label, path }) => (
-            <a key={label} href="#" aria-label={label}
+            { label: "Instagram", href: "https://www.instagram.com/dineforimpact/", path: <><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none" /></> },
+            { label: "Facebook",  href: "#", path: <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z" /> },
+            { label: "WhatsApp",  href: "#", path: <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5Z" /> },
+          ].map(({ label, href, path }) => (
+            <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
               className="text-dine-gray hover:text-dine-gold transition-colors">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
